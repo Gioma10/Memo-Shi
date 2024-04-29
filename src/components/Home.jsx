@@ -1,6 +1,7 @@
+import { forwardRef } from 'react'
 import './home.css'
 
-export default function Home({onStart}){
+const Home= forwardRef(function Home({onStart}, ref){
     return (
         <div className="w-96 h-64 flex flex-col justify-between items-center">
             <p className="text-black text-6xl text-center">
@@ -9,7 +10,9 @@ export default function Home({onStart}){
             </p>
             <div className="flex flex-col items-center">
                 <label className="secondary-text text-2xl">User</label>
-                <input className=" rounded-lg border-stone-900 border outline-none px-2 py-1" type="text" />
+                <input 
+                    ref={ref}
+                    className=" rounded-lg border-stone-900 border outline-none px-2 py-1" type="text" />
             </div>
             <button 
                 id="btn-wave"
@@ -20,4 +23,6 @@ export default function Home({onStart}){
             </button>
         </div>
     )
-}
+})
+
+export default Home;
