@@ -13,20 +13,23 @@ function handleStart(){
 
   return (
     <>
-    <header className=' h-full w-full relative'>
+    <header className='h-full w-full'>
       {!getStart &&
         <div className="h-screen w-full bg-[url('./assets/home/backgroundSign.jpeg')] bg-center bg-cover flex justify-center items-center" >
           <Home 
             ref={username}
             onStart={handleStart}/> 
         </div>}
-
+    </header>
+    <main>
       {getStart &&
-        <div className="h-screen w-full bg-[url('./assets/game/backgroundGame.jpeg')] bg-center bg-cover" >
+        <div className="h-screen w-full bg-[url('./assets/game/backgroundGame.jpeg')] bg-center bg-cover flex flex-col justify-between" >
           <Game username={getStart}/>
         </div>
         }
-    </header>
+    </main>
+      
+   
     </>
   )
 }

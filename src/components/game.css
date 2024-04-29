@@ -1,3 +1,15 @@
-.target{
-    background-image: url('../assets/game/name-target.png');
+
+
+.rotate{
+    animation: back 1s ;
+}
+
+@keyframes back {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+
+        transform: rotateY(180deg);
+    }
 }
