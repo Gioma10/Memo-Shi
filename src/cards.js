@@ -1,62 +1,81 @@
+import Mochi from './assets/game/cards/mochi.jpeg'
+import Hosomaki from './assets/game/cards/hosomaki.jpeg'
+import SoiaBacchette from './assets/game/cards/soia-bacchette.jpeg'
+import Nigiri from './assets/game/cards/nigiri.jpeg'
+import Gambero from './assets/game/cards/gambero.jpeg'
+import Onigiri from './assets/game/cards/onigiri.jpeg'
+
 const Cards= [
     {
         id:1,
-        img: './assets/game/cards/mochi.jpeg',
+        img: Mochi,
+        flip: false,
+        title: 'Mochi',
+    },
+    {
+        id:1,
+        img: Mochi,
+        flip: false,
         title: 'Mochi',
     },
     {
         id:2,
-        img:'./assets/game/cards/mochi.jpeg',
-        title: 'Mochi',
+        img: Hosomaki,
+        flip: false,
+        title: 'Hosomaki',
+    },
+    {
+        id:2,
+        img: Hosomaki,
+        flip: false,
+        title: 'Hosomaki',
     },
     {
         id:3,
-        img:'./assets/game/cards/hosomaki.jpeg',
-        title: 'Hosomaki',
+        img: SoiaBacchette,
+        flip: false,
+        title: 'Soia & Bacchette',
+    },
+    {
+        id:3,
+        img: SoiaBacchette,
+        flip: false,
+        title: 'Soia & Bacchette',
     },
     {
         id:4,
-        img:'./assets/game/cards/hosomaki.jpeg',
-        title: 'Hosomaki',
+        img: Nigiri,
+        flip: false,
+        title: 'Nigiri',
+    },
+    {
+        id:4,
+        img: Nigiri,
+        flip: false,
+        title: 'Nigiri',
     },
     {
         id:5,
-        img:'./assets/game/cards/soia-bacchette.jpeg',
-        title: 'Soia & Bacchette',
+        img: Gambero,
+        flip: false,
+        title: 'Gambero',
+    },
+    {
+        id:5,
+        img: Gambero,
+        flip: false,
+        title: 'Gambero',
     },
     {
         id:6,
-        img:'./assets/game/cards/soia-bacchette.jpeg',
-        title: 'Soia & Bacchette',
-    },
-    {
-        id:7,
-        img:'./assets/game/cards/nigiri.jpeg',
-        title: 'Nigiri',
-    },
-    {
-        id:8,
-        img:'./assets/game/cards/nigiri.jpeg',
-        title: 'Nigiri',
-    },
-    {
-        id:9,
-        img:'./assets/game/cards/gambero.jpeg',
-        title: 'Gambero',
-    },
-    {
-        id:10,
-        img:'./assets/game/cards/gambero.jpeg',
-        title: 'Gambero',
-    },
-    {
-        id:11,
-        img:'./assets/game/cards/onigiri.jpeg',
+        img: Onigiri,
+        flip: false,
         title: 'Onigiri',
     },
     {
-        id:12,
-        img:'./assets/game/cards/onigiri.jpeg',
+        id:6,
+        img: Onigiri,
+        flip: false,
         title: 'Onigiri',
     },
 ]

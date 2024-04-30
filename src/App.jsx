@@ -23,7 +23,7 @@ function handleStart(){
     </header>
     <main>
       {getStart &&
-        <div className="h-screen w-full bg-[url('./assets/game/backgroundGame.jpeg')] bg-center bg-cover flex flex-col justify-between" >
+        <div className="h-screen w-full bg-[url('./assets/game/backgroundGame.jpeg')] bg-center bg-cover flex flex-col justify-center" >
           <Game username={getStart}/>
         </div>
         }

@@ -15,7 +15,7 @@
      }
 }
 .span-wave{
-    position: relative;
+    position: absolute;
     z-index: 1;
     color: rgb(186, 230, 253);
 }

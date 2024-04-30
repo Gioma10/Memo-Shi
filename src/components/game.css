@@ -1,7 +1,7 @@
 
 
 .rotate{
-    animation: back 1s ;
+    transform: rotateY(180deg) ;
 }
 
 @keyframes back {
