@@ -1,0 +1,22 @@
+.front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-memo{
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+
+.active{
+    transform: perspective(300px) rotateY(180deg);
+}

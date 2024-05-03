@@ -9,75 +9,79 @@ const Cards= [
     {
         id:1,
         img: Mochi,
-        flip: false,
+        matched: false,
         title: 'Mochi',
     },
     {
-        id:1,
+        id:2,
         img: Mochi,
-        flip: false,
+        matched: false,
         title: 'Mochi',
     },
     {
-        id:2,
+        id:3,
         img: Hosomaki,
-        flip: false,
+        matched: false,
         title: 'Hosomaki',
     },
     {
-        id:2,
+        id:4,
         img: Hosomaki,
-        flip: false,
+        matched: false,
         title: 'Hosomaki',
     },
     {
-        id:3,
-        img: SoiaBacchette,
-        flip: false,
-        title: 'Soia & Bacchette',
-    },
-    {
-        id:3,
-        img: SoiaBacchette,
-        flip: false,
-        title: 'Soia & Bacchette',
-    },
-    {
-        id:4,
-        img: Nigiri,
-        flip: false,
-        title: 'Nigiri',
-    },
-    {
-        id:4,
-        img: Nigiri,
-        flip: false,
-        title: 'Nigiri',
-    },
-    {
         id:5,
-        img: Gambero,
-        flip: false,
-        title: 'Gambero',
-    },
-    {
-        id:5,
-        img: Gambero,
-        flip: false,
-        title: 'Gambero',
+        img: SoiaBacchette,
+        matched: false,
+        title: 'Soia & Bacchette',
     },
     {
         id:6,
+        img: SoiaBacchette,
+        matched: false,
+        title: 'Soia & Bacchette',
+    },
+    {
+        id:7,
+        img: Nigiri,
+        matched: false,
+        title: 'Nigiri',
+    },
+    {
+        id:8,
+        img: Nigiri,
+        matched: false,
+        title: 'Nigiri',
+    },
+    {
+        id:9,
+        img: Gambero,
+        matched: false,
+        title: 'Gambero',
+    },
+    {
+        id:10,
+        img: Gambero,
+        matched: false,
+        title: 'Gambero',
+    },
+    {
+        id:11,
         img: Onigiri,
-        flip: false,
+        matched: false,
         title: 'Onigiri',
     },
     {
-        id:6,
+        id:12,
         img: Onigiri,
-        flip: false,
+        matched: false,
         title: 'Onigiri',
     },
 ]
 
 export default Cards;
+
+export function shuffleCards(){
+    return Cards.sort(()=> Math.random()-0.5);
+}

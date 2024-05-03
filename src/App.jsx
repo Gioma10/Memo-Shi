@@ -8,7 +8,7 @@ const[getStart, setGetStart]= useState()
 const username= useRef()
 
 function handleStart(){
-  setGetStart(username.current.value)
+  setGetStart(prevStart => !prevStart ? username.current.value : undefined)
 }
 
   return (
@@ -24,7 +24,7 @@ function handleStart(){
     <main>
       {getStart &&
         <div className="h-screen w-full bg-[url('./assets/game/backgroundGame.jpeg')] bg-center bg-cover flex flex-col justify-center" >
-          <Game username={getStart}/>
+          <Game onStart={handleStart} username={getStart}/>
         </div>
         }
     </main>
