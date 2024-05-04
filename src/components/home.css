@@ -1,18 +1,18 @@
 #btn-wave{
     overflow: hidden;
 }
-.secondary-text{
-    color: rgb(186, 230, 253);
-}
 #btn-wave:hover{
     .wave{
-
+        
         top: 0;
     }
     .span-wave {
         color:rgb(12, 74, 110);
         transition: 1s;
-     }
+    }
+}
+.secondary-text{
+    color: rgb(186, 230, 253);
 }
 .span-wave{
     position: absolute;

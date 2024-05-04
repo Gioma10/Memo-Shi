@@ -82,6 +82,9 @@ const Cards= [
 
 export default Cards;
 
-export function shuffleCards(){
-    return Cards.sort(()=> Math.random()-0.5);
+export function shuffleCards(cards){
+    return cards.map((card)=>{
+        card.matched = false
+        return card
+    }).sort(()=> Math.random()-0.5);
 }
