@@ -7,13 +7,14 @@ import { shuffleCards } from '../cards.js';
 import GameOver from './GameOver.jsx';
 
 const initialCards= shuffleCards(CARDS)
-
+let win= [];
 export default function Game({username, onStart}){
     const [gameCards, setGameCards]= useState(initialCards);
     const [chance, setChance]= useState(5)
     const [choiceOne, setChoiceOne]= useState(null);
     const [choiceTwo, setChoiceTwo]= useState(null);
-    const [disabled, setDisabled]= useState(false)
+    const [disabled, setDisabled]= useState(false);
+    const [gameOver, setGameOver]= useState(false)
     
     useEffect(()=>{
         if(choiceOne && choiceTwo){
@@ -51,50 +52,64 @@ export default function Game({username, onStart}){
             return shuffleCards(prevCards)
         })
         setChance(5);
+        resetChoice();
+        setGameOver(false)
     }
 
     function handleSelect(card){
-
         choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
-        
-        
     }
 
     // console.log( choiceOne, choiceTwo);
     
     const youWin= gameCards.filter((card)=> card.matched)
 
-    // console.log('YOUWIN', youWin)
+    console.log('YOUWIN', youWin)
     // console.log('SHUFFLE', gameCards);
     // console.log('CHANCE', chance);
     
-    const gameOver = ()=>{
-        if(youWin.length === 12 || chance === 0){
-            return true
-        }else{
-            return false;
-        }
+    let gameOverText= '';
+    let remainingChance;
+    if(youWin.length === 12){
+        gameOverText= 'Hai vinto';
+        remainingChance= chance;
+        setTimeout(()=>{
+            setGameOver(true)
+        },1000)
+    }else if(chance === 0){
+        gameOverText= 'Hai Perso';
+        remainingChance= chance;
+        setTimeout(()=>{
+            setGameOver(true)
+        },1000)
     }
+
     
 
+   
     // console.log('choiceOne ',choiceOne)
     // console.log('status game', gameOver());
     
     return (
         <>
-            {gameOver() &&  (<GameOver onBack={onStart} onRestart={handleRestart}/>)}
-            {!gameOver() && (
+            {gameOver &&  
+                (<GameOver 
+                    text={gameOverText} 
+                    onBack={onStart} 
+                    onRestart={handleRestart}
+                    remainingChance={remainingChance}/>)}
+            {!gameOver && (
                 <>
                     <div className='flex justify-between items-center'>
                         <div className='flex justify-end w-full gap-10 h-1/4'>
                             <Button onFunction={onStart}  text='Back'/>
                         </div>
-                        <div className="z-10 w-full h-36 gap-4 flex justify-center flex-col items-center">
-                            <p className="border border-black rounded-md px-5 text-2xl">
+                        <div className="z-10 w-full h-36 gap-4 flex justify-center items-center">
+                            <p className="border border-black py-2 rounded-md px-5 text-2xl">
                                     User: 
                                     <span className='secondary-text ps-5'>{username}</span>
                             </p>
-                            <p className=" text-2xl">
+                            <p className="border border-black py-2 rounded-md px-5 text-2xl">
                                 Chance:
                                 <span className='secondary-text ps-5'>{chance}</span>
                             </p>
