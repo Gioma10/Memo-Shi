@@ -8,7 +8,7 @@ import GameOver from './GameOver.jsx';
 
 const initialCards= shuffleCards(CARDS)
 let win= [];
-export default function Game({username, onStart}){
+export default function Game({username, onHome}){
     const [gameCards, setGameCards]= useState(initialCards);
     const [chance, setChance]= useState(5)
     const [choiceOne, setChoiceOne]= useState(null);
@@ -84,9 +84,6 @@ export default function Game({username, onStart}){
         },1000)
     }
 
-    
-
-   
     // console.log('choiceOne ',choiceOne)
     // console.log('status game', gameOver());
     
@@ -95,14 +92,14 @@ export default function Game({username, onStart}){
             {gameOver &&  
                 (<GameOver 
                     text={gameOverText} 
-                    onBack={onStart} 
+                    onBack={onHome} 
                     onRestart={handleRestart}
                     remainingChance={remainingChance}/>)}
             {!gameOver && (
                 <>
                     <div className='flex justify-between items-center'>
                         <div className='flex justify-end w-full gap-10 h-1/4'>
-                            <Button onFunction={onStart}  text='Back'/>
+                            <Button onFunction={onHome}  text='Back'/>
                         </div>
                         <div className="z-10 w-full h-36 gap-4 flex justify-center items-center">
                             <p className="border border-black py-2 rounded-md px-5 text-2xl">
