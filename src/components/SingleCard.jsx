@@ -4,7 +4,7 @@ import './single-card.css'
 export default function SingleCard({onSelect, card, flip, disabled}){
 
     // let cardClass= 'absolute w-full h-full rounded-md top-0'
-    let btnClass= 'border-2 shadow-md border-black rounded-md w-48 h-48 relative btn-memo'
+    let btnClass= 'border-2 shadow-md border-black rounded-md w-48 h-48 btn-memo'
 
 
     if(flip){

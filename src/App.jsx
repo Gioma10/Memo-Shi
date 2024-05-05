@@ -23,9 +23,9 @@ function handleHome(){
     <>
     <header className='h-full w-full'>
       {!getStart &&
-        <div className="h-screen w-full flex justify-center items-center" >
+        <div className="h-screen w-full flex justify-center items-center relative" >
           <video 
-            className=' h-screen w-full fixed z-0' 
+            className='absolute bottom-0 z-0' 
             src={videoBack} 
             autoPlay 
             loop />
@@ -38,10 +38,10 @@ function handleHome(){
         }
             
     </header>
-    <main>
+    <main className='h-full w-full'>
       {getStart &&
-        <div className="h-screen w-full flex flex-col justify-center" >
-          <video className=' h-screen w-full fixed z-0' src={videoBack} autoPlay loop />
+        <div className="h-screen w-full flex flex-col justify-center relative" >
+          <video className=' absolute bottom-0 z-0' src={videoBack} autoPlay loop />
           <Game onHome={handleHome} username={getStart}/>
         </div>
         }

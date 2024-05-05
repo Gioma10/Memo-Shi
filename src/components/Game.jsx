@@ -97,7 +97,7 @@ export default function Game({username, onHome}){
                     remainingChance={remainingChance}/>)}
             {!gameOver && (
                 <>
-                    <div className='flex justify-between items-center'>
+                    <div className=' flex justify-between items-center'>
                         <div className='flex justify-end w-full gap-10 h-1/4'>
                             <Button onFunction={onHome}  text='Back'/>
                         </div>
@@ -115,7 +115,7 @@ export default function Game({username, onHome}){
                             <Button  text='Restart' onFunction={handleRestart}/>
                         </div>
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center z-10 w-full'>
                         <div className=' w-2/3 grid grid-cols-4 gap-4 '>
                             
                             {gameCards.map((card)=>{
